@@ -2,6 +2,8 @@
 
 ![MedAudit Kaggle Capstone cover](docs/assets/kaggle-card-thumbnail.png)
 
+![MedAudit architecture](docs/assets/architecture.png)
+
 A small, self-contained research project that trains a NumPy logistic-regression
 baseline on PneumoniaMNIST, exports test predictions in the MedAudit CSV format,
 and displays the results through a Flask web application.
@@ -40,6 +42,9 @@ Deployed Cloud Run version:
 https://medaudit-statistics-tool-770349538120.us-east1.run.app
 
 Kaggle writeup: `docs/KAGGLE_WRITEUP.md`.
+
+Kaggle submission package and video script: `docs/SUBMISSION_PACKAGE.md` and
+`docs/VIDEO_SCRIPT.md`.
 
 Production specification and Capstone summary:
 `docs/SPEC.md` and `docs/CAPSTONE.md`.

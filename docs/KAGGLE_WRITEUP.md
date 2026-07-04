@@ -2,6 +2,8 @@
 
 **Subtitle:** Turning prediction CSV files into deterministic evidence, safe interpretation, and a production-grade audit trail.
 
+**Track:** Agents for Good
+
 > **One-sentence summary:** MedAudit is a research-only agent workflow that validates medical-model prediction files, computes reproducible performance statistics with deterministic tools, and constrains interpretation through a portable, evaluated Agent Skill.
 
 ## Why I built this
@@ -33,6 +35,8 @@ The deterministic audit tool returns:
 Uploaded data is processed in memory. Audit logs contain only an opaque audit ID, status, duration, row count, and threshold; filenames, case identifiers, CSV rows, and images are not logged.
 
 ## Architecture
+
+![MedAudit architecture](https://raw.githubusercontent.com/Longer430/medaudit-pneumoniamnist/main/docs/assets/architecture.png)
 
 ```text
 Researcher / ML engineer
@@ -66,6 +70,17 @@ The project has two public demonstrations:
 2. **Production deterministic service:** [MedAudit statistics tool](https://medaudit-statistics-tool-770349538120.us-east1.run.app/)
 
 The frontend demonstrates the researcher workflow. The second service is the independently tested numerical source of truth. They are presented separately rather than claiming an integration that does not yet exist.
+
+## Course concepts demonstrated
+
+MedAudit explicitly demonstrates four concepts from the course evaluation framework:
+
+| Course concept | Repository or video evidence |
+|---|---|
+| Agent Skills | Portable `skills/medaudit-model-audit/` package with progressive disclosure, a deterministic script, references, report asset, and routing evals |
+| Security features | Strict input validation, upload-size limit, prohibited-claim scan, privacy-log test, security headers, and a non-root container |
+| Deployability | Dockerfile, gated Cloud Build pipeline, semantic versioning, health/readiness endpoints, and a public Cloud Run service |
+| Antigravity | The video demonstrates the Antigravity-ready repository structure, `AGENTS.md`, `.Codex` context, Skill invocation, and evaluation commands |
 
 ## How the five course days shaped the project
 

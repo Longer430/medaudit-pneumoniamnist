@@ -34,3 +34,8 @@
   URL remains as an explicit submission placeholder.
 - Public source repository target: `https://github.com/Longer430/medaudit-pneumoniamnist`.
 - Kaggle card image: `docs/assets/kaggle-card-thumbnail.png` (1672 x 941).
+- Kaggle submission requirements verified from the live Tracks and Awards page
+  on 2026-07-04. Submission package: `docs/SUBMISSION_PACKAGE.md`; video script:
+  `docs/VIDEO_SCRIPT.md`; media architecture image: `docs/assets/architecture.png`.
+- Selected track: Agents for Good. Demonstrated course concepts: Agent Skills,
+  Security Features, Deployability, and Antigravity (to be shown in the video).

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07172f"/><stop offset="1" stop-color="#0b2741"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".28"/></filter>
+    <style>
+      .title{font:700 54px Arial,sans-serif;fill:#fff}.sub{font:24px Arial,sans-serif;fill:#9fdbea}
+      .box{fill:#102e4a;stroke:#39d8e5;stroke-width:3;rx:24;filter:url(#shadow)}
+      .head{font:700 26px Arial,sans-serif;fill:#fff}.body{font:19px Arial,sans-serif;fill:#c7e5ec}
+      .arrow{stroke:#5de3ea;stroke-width:6;fill:none;marker-end:url(#tip)}.tag{font:700 17px Arial,sans-serif;fill:#ffd36c}
+    </style>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5de3ea"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="100" y="92" class="title">MedAudit Agent Architecture</text>
+  <text x="100" y="132" class="sub">Deterministic evidence • evaluated workflow • research-only interpretation</text>
+
+  <rect x="80" y="250" width="270" height="260" class="box"/>
+  <text x="110" y="305" class="head">Researcher</text>
+  <text x="110" y="350" class="body">Prediction CSV</text><text x="110" y="382" class="body">Audit request</text>
+  <text x="110" y="445" class="tag">DE-IDENTIFIED DATA</text>
+
+  <rect x="445" y="210" width="330" height="340" class="box"/>
+  <text x="478" y="270" class="head">Compatible Agent Host</text>
+  <text x="478" y="315" class="body">Routes by user intent</text><text x="478" y="347" class="body">Loads Skill on demand</text>
+  <text x="478" y="405" class="tag">AGENT SKILL</text>
+  <text x="478" y="445" class="body">Workflow + safety rules</text><text x="478" y="477" class="body">Metrics remain tool-owned</text>
+
+  <rect x="870" y="210" width="340" height="340" class="box"/>
+  <text x="905" y="270" class="head">Deterministic Tool</text>
+  <text x="905" y="315" class="body">Schema validation</text><text x="905" y="347" class="body">ROC AUC + 95% CI</text>
+  <text x="905" y="379" class="body">Sensitivity + specificity</text>
+  <text x="905" y="437" class="tag">CLOUD RUN API</text>
+  <text x="905" y="477" class="body">Structured privacy logs</text>
+
+  <rect x="1305" y="250" width="230" height="260" class="box"/>
+  <text x="1338" y="305" class="head">Evidence</text>
+  <text x="1338" y="350" class="body">Metrics</text><text x="1338" y="382" class="body">Limitations</text><text x="1338" y="414" class="body">Audit report</text>
+  <text x="1338" y="468" class="tag">RESEARCH ONLY</text>
+
+  <path d="M350 380 H435" class="arrow"/><path d="M775 380 H860" class="arrow"/><path d="M1210 380 H1295" class="arrow"/>
+
+  <rect x="445" y="650" width="765" height="125" class="box"/>
+  <text x="485" y="700" class="head">Quality &amp; Security Gate</text>
+  <text x="485" y="740" class="body">6 API/trajectory cases • prohibited-claim scan • privacy-log test • CI/CD</text>
+  <path d="M1035 550 V640" class="arrow"/>
+</svg>
