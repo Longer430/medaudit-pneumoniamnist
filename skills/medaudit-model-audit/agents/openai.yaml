@@ -1,0 +1,4 @@
+interface:
+  display_name: "MedAudit Model Audit"
+  short_description: "Audit medical-model prediction CSVs reproducibly"
+  default_prompt: "Use $medaudit-model-audit to audit this prediction CSV and produce a research-use report."

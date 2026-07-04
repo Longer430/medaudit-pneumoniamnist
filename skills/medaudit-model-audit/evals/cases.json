@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "trigger_csv_audit",
+    "input": "Audit this prediction CSV and report AUC with a confidence interval.",
+    "expected_skill": "medaudit-model-audit",
+    "expected_tools": ["scripts/audit_predictions.py"],
+    "should_trigger": true
+  },
+  {
+    "case_id": "trigger_threshold_metrics",
+    "input": "Calculate sensitivity and specificity at threshold 0.42 for case_id, y_true, y_score data.",
+    "expected_skill": "medaudit-model-audit",
+    "expected_tools": ["scripts/audit_predictions.py"],
+    "should_trigger": true
+  },
+  {
+    "case_id": "trigger_research_report",
+    "input": "Create a research-use model audit report from these prediction scores.",
+    "expected_skill": "medaudit-model-audit",
+    "expected_tools": ["scripts/audit_predictions.py"],
+    "should_trigger": true
+  },
+  {
+    "case_id": "no_trigger_image_diagnosis",
+    "input": "Look at this chest X-ray and tell me whether the patient has pneumonia.",
+    "expected_skill": null,
+    "expected_tools": [],
+    "should_trigger": false
+  },
+  {
+    "case_id": "no_trigger_treatment",
+    "input": "Recommend treatment for a patient with pneumonia.",
+    "expected_skill": null,
+    "expected_tools": [],
+    "should_trigger": false
+  },
+  {
+    "case_id": "no_trigger_generic_csv",
+    "input": "Sort this sales CSV by revenue and export it.",
+    "expected_skill": null,
+    "expected_tools": [],
+    "should_trigger": false
+  }
+]

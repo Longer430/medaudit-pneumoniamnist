@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "valid_balanced",
+    "csv": "case_id,y_true,y_score\na,0,0.1\nb,1,0.9\n",
+    "expected_status": 200,
+    "expected": {"rows": 2, "auc": 1.0},
+    "expected_trajectory": ["audit_predictions"]
+  },
+  {
+    "case_id": "valid_tied_scores",
+    "csv": "case_id,y_true,y_score\na,0,0.5\nb,1,0.5\nc,0,0.1\nd,1,0.9\n",
+    "expected_status": 200,
+    "expected": {"rows": 4, "auc": 0.875},
+    "expected_trajectory": ["audit_predictions"]
+  },
+  {
+    "case_id": "invalid_schema",
+    "csv": "case_id,label,score\na,0,0.1\nb,1,0.9\n",
+    "expected_status": 400,
+    "expected_error": "Missing columns",
+    "expected_trajectory": ["audit_predictions"]
+  },
+  {
+    "case_id": "duplicate_identifier",
+    "csv": "case_id,y_true,y_score\na,0,0.1\na,1,0.9\n",
+    "expected_status": 400,
+    "expected_error": "case_id values must be unique",
+    "expected_trajectory": ["audit_predictions"]
+  },
+  {
+    "case_id": "score_out_of_range",
+    "csv": "case_id,y_true,y_score\na,0,-0.1\nb,1,1.1\n",
+    "expected_status": 400,
+    "expected_error": "y_score must be between 0 and 1",
+    "expected_trajectory": ["audit_predictions"]
+  },
+  {
+    "case_id": "single_class",
+    "csv": "case_id,y_true,y_score\na,1,0.8\nb,1,0.9\n",
+    "expected_status": 400,
+    "expected_error": "y_true must contain both 0 and 1",
+    "expected_trajectory": ["audit_predictions"]
+  }
+]

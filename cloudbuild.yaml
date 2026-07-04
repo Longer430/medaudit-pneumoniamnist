@@ -1,0 +1,36 @@
+steps:
+  - name: python:3.13-slim
+    id: test
+    entrypoint: bash
+    args:
+      - -ceu
+      - |
+        pip install --quiet -r requirements.txt
+        python evals/run_evals.py
+        python -m unittest discover -s tests -v
+  - name: gcr.io/cloud-builders/docker
+    id: build
+    args: ["build", "-t", "${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/medaudit-statistics-tool:${_TAG}", "."]
+  - name: gcr.io/cloud-builders/docker
+    id: push
+    args: ["push", "${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/medaudit-statistics-tool:${_TAG}"]
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    id: deploy
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - medaudit-statistics-tool
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/medaudit-statistics-tool:${_TAG}
+      - --region=${_REGION}
+      - --platform=managed
+      - --allow-unauthenticated
+      - --set-env-vars=APP_VERSION=1.0.0
+      - --quiet
+substitutions:
+  _REGION: us-east1
+  _TAG: 1.0.0
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/medaudit-statistics-tool:${_TAG}
+options:
+  logging: CLOUD_LOGGING_ONLY
