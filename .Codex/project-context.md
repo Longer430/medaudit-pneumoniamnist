@@ -39,3 +39,6 @@
   `docs/VIDEO_SCRIPT.md`; media architecture image: `docs/assets/architecture.png`.
 - Selected track: Agents for Good. Demonstrated course concepts: Agent Skills,
   Security Features, Deployability, and Antigravity (to be shown in the video).
+- Generated Kaggle video: `docs/media/medaudit-kaggle-capstone.mp4`, English
+  system narration, 3:12, 1600 x 900 H.264/AAC. Editable source deck:
+  `docs/media/medaudit-capstone-video-deck.pptx`.

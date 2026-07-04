@@ -14,6 +14,9 @@
 2. Architecture: `docs/assets/architecture.png`
 3. YouTube demo: replace `[ADD PUBLIC YOUTUBE URL]` in the Writeup after publishing.
 
+Generated video file: `docs/media/medaudit-kaggle-capstone.mp4` (3:12).
+Editable slide deck: `docs/media/medaudit-capstone-video-deck.pptx`.
+
 ## Public links
 
 - Working product: https://medaudit-statistics-tool-770349538120.us-east1.run.app/

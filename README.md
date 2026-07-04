@@ -46,6 +46,9 @@ Kaggle writeup: `docs/KAGGLE_WRITEUP.md`.
 Kaggle submission package and video script: `docs/SUBMISSION_PACKAGE.md` and
 `docs/VIDEO_SCRIPT.md`.
 
+Generated English-narrated demo video:
+`docs/media/medaudit-kaggle-capstone.mp4` (3 minutes 12 seconds).
+
 Production specification and Capstone summary:
 `docs/SPEC.md` and `docs/CAPSTONE.md`.
 
